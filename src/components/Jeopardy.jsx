@@ -267,7 +267,7 @@ import "../App.css";
             "points": 1000
           }
         ],
-        "Recent US History": [
+        "Recent United States History": [
           {
             "question": "Who did the United States fight in World War II?",
             "answer": "Japan, Germany, and Italy",
@@ -319,7 +319,7 @@ import "../App.css";
             "points": 1000
           }
         ],
-        "Geography of USA": [
+        "Geography of United States": [
         {
           "question": "Name one of the two longest rivers in the United States.",
           "answer": "Missouri (River); Mississippi (River)",
@@ -387,7 +387,62 @@ import "../App.css";
           "answer": "New Year's Day; Martin Luther King, Jr. Day; Presidents' Day; Memorial Day; Independence Day; Labor Day; Columbus Day; Veterans Day; Thanksgiving; Christmas",
           "points": 500
         }
-      ]
+      ],
+      
+        "Additional Questions": [
+          {
+            "question": "What is the name of the President of the United States now?",
+            "answer": "The answer to this question changes with elections. As of January 2025, this information would need to be updated based on the most recent election results.",
+            "points": 100
+          },
+          {
+            "question": "What is the name of the Vice President of the United States now?",
+            "answer": "The answer to this question changes with elections. As of January 2025, this information would need to be updated based on the most recent election results.",
+            "points": 200
+          },
+          {
+            "question": "What is the political party of the President now?",
+            "answer": "The answer to this question changes with elections. As of January 2025, this information would need to be updated based on the most recent election results.",
+            "points": 300
+          },
+          {
+            "question": "What is the name of the Speaker of the House of Representatives now?",
+            "answer": "The answer to this question changes with elections and appointments. As of January 2025, this information would need to be updated based on the most recent congressional leadership.",
+            "points": 400
+          },
+          {
+            "question": "Who is the Chief Justice of the United States now?",
+            "answer": "The answer to this question changes with appointments. As of January 2025, this information would need to be updated based on the most recent Supreme Court appointments.",
+            "points": 500
+          },
+          {
+            "question": "Under our Constitution, some powers belong to the federal government. What is one power of the federal government?",
+            "answer": "To print money; to declare war; to create an army; to make treaties",
+            "points": 600
+          },
+          {
+            "question": "Under our Constitution, some powers belong to the states. What is one power of the states?",
+            "answer": "Provide schooling and education; provide protection (police); provide safety (fire departments); give a driver's license; approve zoning and land use",
+            "points": 700
+          },
+          {
+            "question": "Who is the Governor of your state now?",
+            "answer": "Answers vary by state. As of January 2025, this information would need to be updated based on the most recent state elections.",
+            "points": 800
+          },
+          {
+            "question": "What is the capital of your state?",
+            "answer": "Answers vary by state.",
+            "points": 900
+          },
+          {
+            "question": "What are the two major political parties in the United States?",
+            "answer": "Democratic and Republican",
+            "points": 1000
+          }
+        ]
+      
+      
       }
     ]
   

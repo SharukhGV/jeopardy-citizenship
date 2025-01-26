@@ -802,6 +802,7 @@ export default function Jeopardy() {
     return (
         <div className="container">
             <h1 className="title">US Citizenship Test Jeopardy</h1>
+            <h3 style={{fontSize:"17px"}} className="title">← Scroll Horizontally to View More Categories → </h3>
             <div className="categories">
                 {categories.map((category) =>
                     Object.entries(category).map(([categoryName, questions]) => (

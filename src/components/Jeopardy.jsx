@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import clickSound from "./clickSound.mp3"
-import correctSound from "./correctSound.mp3"
-import wrongSound from "./wrongSound.mp3"
+import React, { useState, useEffect } from "react";
+import Confetti from 'react-confetti';
+import clickSound from "./clickSound.mp3";
+import correctSound from "./correctSound.mp3";
+import wrongSound from "./wrongSound.mp3";
 import "../App.css";
 
 
@@ -439,6 +440,30 @@ export default function Jeopardy() {
     const [score, setScore] = useState(0);
     const [showAnswer, setShowAnswer] = useState(false);
     const [answeredQuestions, setAnsweredQuestions] = useState([]);
+    const [incorrectAnswers, setIncorrectAnswers] = useState([]);
+    const [showIncorrect, setShowIncorrect] = useState(false);
+    const [correctAnswers, setCorrectAnswers] = useState([]);
+
+
+   // Load incorrect answers from localStorage on mount
+   useEffect(() => {
+    const savedIncorrect = JSON.parse(localStorage.getItem('incorrectAnswers')) || [];
+    setIncorrectAnswers(savedIncorrect);
+}, []);
+
+// Save incorrect answers to localStorage
+useEffect(() => {
+    localStorage.setItem('incorrectAnswers', JSON.stringify(incorrectAnswers));
+}, [incorrectAnswers]);
+
+// Calculate total questions and correct percentage
+const totalQuestions = categories.reduce((total, category) => {
+    const questions = Object.values(category)[0];
+    return total + questions.length;
+}, 0);
+const correctCount = correctAnswers.length;
+
+
 
     const playSoundOnClick = () => {
         const audio = new Audio(clickSound);
@@ -471,12 +496,15 @@ export default function Jeopardy() {
     };
 
     const handleAnswer = (isCorrect) => {
-        if (isCorrect) {
-            setScore(score + selectedQuestion.points);
-        }
-        setAnsweredQuestions([...answeredQuestions, selectedQuestion]);
-        setSelectedQuestion(null);
-    };
+      if (isCorrect) {
+          setScore(score + selectedQuestion.points);
+          setCorrectAnswers(prev => [...prev, selectedQuestion]);
+      } else {
+          setIncorrectAnswers(prev => [...prev, selectedQuestion]);
+      }
+      setAnsweredQuestions([...answeredQuestions, selectedQuestion]);
+      setSelectedQuestion(null);
+  };
 
     const isQuestionAnswered = (question) => {
         return answeredQuestions.some((q) => q.question === question.question);
@@ -484,6 +512,15 @@ export default function Jeopardy() {
 
     return (
         <div className="container">
+
+{correctCount / totalQuestions >= 0.6 && (
+                <Confetti
+                    width={window.innerWidth}
+                    height={window.innerHeight}
+                    recycle={false}
+                />
+            )}
+
             <h1 className="title">US Citizenship Test Jeopardy</h1>
             <h3 style={{fontSize:"17px"}} className="title">← Scroll Horizontally to View More Categories → </h3>
             <div className="categories">
@@ -534,6 +571,33 @@ export default function Jeopardy() {
             )}
 
             <div className="score">Score: {score}</div>
+            {/* Incorrect answers section */}
+            <div className="incorrect-section">
+                <button 
+                    className="toggle-incorrect"
+                    onClick={() => setShowIncorrect(!showIncorrect)}
+                >
+                    {showIncorrect ? 'Hide Incorrect Answers' : 'Show Incorrect Answers'}
+                </button>
+                
+                {showIncorrect && (
+                    <div className="incorrect-list">
+                        <button 
+                            className="clear-incorrect"
+                            onClick={() => setIncorrectAnswers([])}
+                        >
+                            Clear All Incorrect Answers
+                        </button>
+                        
+                        {incorrectAnswers.map((q, index) => (
+                            <div key={index} className="incorrect-item">
+                                <p><strong>Question:</strong> {q.question}</p>
+                                <p><strong>Answer:</strong> {q.answer}</p>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

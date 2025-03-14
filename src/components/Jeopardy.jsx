@@ -426,8 +426,113 @@ import "../App.css";
             "answer": "Democratic and Republican",
             "points": 1000
           }
-        ]
-      
+        ],
+        
+          "U.S. Government Basics": [
+            {
+              "question": "What is the economic system in the United States?",
+              "answer": "capitalist economy, market economy",
+              "points": 100
+            },
+            {
+              "question": "What is the 'rule of law'?",
+              "answer": "Everyone must follow the law. Leaders must obey the law. Government must obey the law. No one is above the law.",
+              "points": 200
+            },
+            {
+              "question": "Who is one of your state’s U.S. Senators now?",
+              "answer": "Answers will vary. [District of Columbia residents and residents of U.S. territories should answer that D.C. (or the territory where the applicant lives) has no U.S. Senators.]",
+              "points": 300
+            },
+            {
+              "question": "Name your U.S. Representative.",
+              "answer": "Answers will vary. [Residents of territories with nonvoting Delegates or Resident Commissioners may provide the name of that Delegate or Commissioner. Also acceptable is any statement that the territory has no (voting) Representatives in Congress.]",
+              "points": 400
+            },
+            {
+              "question": "Why do some states have more Representatives than other states?",
+              "answer": "(because of) the state’s population, (because) they have more people, (because) some states have more people",
+              "points": 500
+            },
+            {
+              "question": "We elect a President for how many years?",
+              "answer": "four (4)",
+              "points": 600
+            },
+            {
+              "question": "In what month do we vote for President?",
+              "answer": "November",
+              "points": 700
+            },
+            {
+              "question": "If the President can no longer serve, who becomes President?",
+              "answer": "the Vice President",
+              "points": 800
+            },
+            {
+              "question": "If both the President and the Vice President can no longer serve, who becomes President?",
+              "answer": "the Speaker of the House",
+              "points": 900
+            },
+            {
+              "question": "Who is the Commander in Chief of the military?",
+              "answer": "the President",
+              "points": 1000
+            }
+          ],
+          "U.S. History and Leadership": [
+            {
+              "question": "Who signs bills to become laws?",
+              "answer": "the President",
+              "points": 100
+            },
+            {
+              "question": "Who vetoes bills?",
+              "answer": "the President",
+              "points": 200
+            },
+            {
+              "question": "What does the President’s Cabinet do?",
+              "answer": "advises the President",
+              "points": 300
+            },
+            {
+              "question": "What are two Cabinet-level positions?",
+              "answer": "Secretary of Agriculture, Secretary of Commerce, Secretary of Defense, Secretary of Education, Secretary of Energy, Secretary of Health and Human Services, Secretary of Homeland Security, Secretary of Housing and Urban Development, Secretary of the Interior, Secretary of Labor, Secretary of State, Secretary of Transportation, Secretary of the Treasury, Secretary of Veterans Affairs, Attorney General, Vice President",
+              "points": 400
+            },
+            {
+              "question": "What does the judicial branch do?",
+              "answer": "reviews laws, explains laws, resolves disputes (disagreements), decides if a law goes against the Constitution",
+              "points": 500
+            },
+            {
+              "question": "What is the highest court in the United States?",
+              "answer": "the Supreme Court",
+              "points": 600
+            },
+            {
+              "question": "How many justices are on the Supreme Court?",
+              "answer": "Visit uscis.gov/citizenship/testupdates for the number of justices on the Supreme Court.",
+              "points": 700
+            },
+            {
+              "question": "What is one thing Benjamin Franklin is famous for?",
+              "answer": "U.S. diplomat, oldest member of the Constitutional Convention, first Postmaster General of the United States, writer of 'Poor Richard’s Almanac', started the first free libraries",
+              "points": 800
+            },
+            {
+              "question": "Who is the 'Father of Our Country'?",
+              "answer": "(George) Washington",
+              "points": 900
+            },
+            {
+              "question": "Who was the first President?",
+              "answer": "(George) Washington",
+              "points": 1000
+            }
+          ]
+              
       
       }
     ]
